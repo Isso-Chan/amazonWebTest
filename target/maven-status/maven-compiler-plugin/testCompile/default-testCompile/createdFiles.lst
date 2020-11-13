@@ -1,0 +1,14 @@
+de\amazon\stepDefinitions\Hooks.class
+de\amazon\utilities\ConfigurationReader.class
+de\amazon\pages\RegistrationPage.class
+de\amazon\utilities\BrowserUtilities$1.class
+de\amazon\runners\CucumberRunner.class
+de\amazon\pages\BasePage.class
+de\amazon\utilities\Driver.class
+de\amazon\stepDefinitions\MiniSmokeStepDefs.class
+de\amazon\pages\ProductPage.class
+de\amazon\utilities\BrowserUtilities.class
+de\amazon\runners\FailedTestRunner.class
+de\amazon\pages\SearchResultsPage.class
+de\amazon\pages\BasketPage.class
+de\amazon\pages\Homepage.class

@@ -1,0 +1,13 @@
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\stepDefinitions\MiniSmokeStepDefs.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\utilities\ConfigurationReader.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\BasePage.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\ProductPage.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\Homepage.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\SearchResultsPage.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\BasketPage.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\utilities\Driver.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\runners\CucumberRunner.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\utilities\BrowserUtilities.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\runners\FailedTestRunner.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\stepDefinitions\Hooks.java
+E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages\RegistrationPage.java
