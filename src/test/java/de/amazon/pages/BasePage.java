@@ -49,8 +49,9 @@ public abstract class BasePage {
      */
     public void changeLanguage(String language) {
         BrowserUtilities.hover(languageBar);
-        Driver.get().findElement(By.cssSelector("#nav-flyout-icp a[href^=\"#switch-lang\"]"))
-                .findElement(By.xpath("//span[text()=\"" + language + "\"]")).click();
+        //Driver.get().findElement(By.cssSelector("#nav-flyout-icp a[href^=\"#switch-lang\"]"))
+                //.findElement(By.xpath("//span[text()=\"" + language + "\"]")).click();
+        Driver.get().findElement(By.xpath("//div[@id='nav-flyout-icp']//span[.='"+language+"']")).click();
 
     }
 

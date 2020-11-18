@@ -10,9 +10,9 @@ public class Homepage extends BasePage {
      *
      * @Param Driver.get()
      */
-    public Homepage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+    //public Homepage() {
+    //    PageFactory.initElements(Driver.get(), this);
+    //}
 
 
 }

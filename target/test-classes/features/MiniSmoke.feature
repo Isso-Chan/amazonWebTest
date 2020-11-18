@@ -1,8 +1,8 @@
-#  ...Given TASK...
-#  As a new Amazon user, I want to search for the cheapest Snickers and Skittles on the page.
-#  Add the cheapest ones to your Basket and check if the basket calculates the result correctly
-#  Check if on Checkout, without an account, the user gets redirected to the registration page.
-Feature: Amazon, the cheapest product searching and checkout process
+#  ...TASK...
+#  As a new Amazon user, I want to buy the cheapest Snickers and Skittles on the page.
+#  Add the cheapest ones to Basket and proceed to Checkout
+
+Feature: The cheapest product searching and checkout process
   As a new Amazon user,
   I want to search for the cheapest Snickers and Skittles on the page,
   so that I can save money by buying them
@@ -21,14 +21,15 @@ Feature: Amazon, the cheapest product searching and checkout process
     And I sort the products by "Price: Low to High"
     And I add the cheapest "Skittles" to the basket
     And I navigate to basket page
+
   # Expected result is PASS
   @all @basket
   Scenario: Verify that the basket calculates the result correctly
     Then I see that the basket calculates the result correctly
 
-# Expected result is FAIL, cause I get redirected to the Login Page, but in Task, Registration Page is written.
+# Expected result is intentionally wrong entered to make the case FAIL
   @all @checkout
-  Scenario: Verify that on Checkout, without an account, the user gets redirected to the registration page
+  Scenario: Verify that new user gets redirected to login page
     When I proceed to checkout
     Then I get redirected to the "Amazon Registration" page
 

@@ -1,11 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b76390d-cb29-4253-98c3-3160fb5b3c1e" name="Default Changelist" comment="" />
+    <list default="true" id="9b76390d-cb29-4253-98c3-3160fb5b3c1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/stepDefinitions/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/MiniSmoke.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/MiniSmoke.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/amazonWebTest-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazonWebTest-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/default-html-reports" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-html-reports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/failed-html-report" beforeDir="false" afterPath="$PROJECT_DIR$/target/failed-html-report" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-failures.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-failures.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-features.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-steps.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-steps.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-tags.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-tags.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-feature_366884491.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-feature_366884491.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_1716947461.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_1716947461.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_2149486944.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_2149486944.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_3971419525.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_3971419525.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/rerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/rerun.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -15,12 +40,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1kFKqnmBF0uO5ddFuF6skrlF4BP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../amazonTestHS/AppsfactoryChallengeTask1" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -42,8 +69,23 @@
       <recent name="E:\CaseStudies\amazonWebTest\src\test\java\de\amazon\pages" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FailedTestRunner">
+  <component name="RunManager" selected="JUnit.CucumberRunner (2)">
     <configuration name="CucumberRunner (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="amazonWebTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.amazon.runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.amazon.runners" />
+      <option name="MAIN_CLASS_NAME" value="de.amazon.runners.CucumberRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CucumberRunner (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="amazonWebTest" />
       <extension name="coverage">
         <pattern>
@@ -90,6 +132,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CucumberRunner (2)" />
         <item itemvalue="JUnit.FailedTestRunner" />
         <item itemvalue="JUnit.CucumberRunner (1)" />
         <item itemvalue="JUnit.CucumberRunner" />
@@ -126,30 +169,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="108" key="FileChooserDialogImpl/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605297652531" />
-    <state width="1322" height="261" key="GridCell.Tab.0.bottom" timestamp="1605307637494">
+    <state width="1322" height="164" key="GridCell.Tab.0.bottom" timestamp="1605711830705">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="261" key="GridCell.Tab.0.bottom/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605307637494" />
+    <state width="1322" height="164" key="GridCell.Tab.0.bottom/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605711830705" />
     <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.bottom/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
-    <state width="1322" height="261" key="GridCell.Tab.0.center" timestamp="1605307637493">
+    <state width="1322" height="164" key="GridCell.Tab.0.center" timestamp="1605711830704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="261" key="GridCell.Tab.0.center/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605307637493" />
+    <state width="1322" height="164" key="GridCell.Tab.0.center/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605711830704" />
     <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.center/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
-    <state width="1322" height="261" key="GridCell.Tab.0.left" timestamp="1605307637493">
+    <state width="1322" height="164" key="GridCell.Tab.0.left" timestamp="1605711830704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="261" key="GridCell.Tab.0.left/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605307637493" />
+    <state width="1322" height="164" key="GridCell.Tab.0.left/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605711830704" />
     <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080929" />
     <state width="1132" height="165" key="GridCell.Tab.0.left/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265578" />
-    <state width="1322" height="261" key="GridCell.Tab.0.right" timestamp="1605307637493">
+    <state width="1322" height="164" key="GridCell.Tab.0.right" timestamp="1605711830704">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="261" key="GridCell.Tab.0.right/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605307637493" />
+    <state width="1322" height="164" key="GridCell.Tab.0.right/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605711830704" />
     <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.right/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
+    <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1605710414198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605710414198" />
+    <state width="1322" height="217" key="GridCell.Tab.1.center" timestamp="1605710414198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.center/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605710414198" />
+    <state width="1322" height="217" key="GridCell.Tab.1.left" timestamp="1605710414198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.left/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605710414198" />
+    <state width="1322" height="217" key="GridCell.Tab.1.right" timestamp="1605710414198">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.right/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605710414198" />
     <state x="213" y="21" key="Maven.ArtifactSearchDialog" timestamp="1605295947797">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -158,5 +217,20 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="68" key="NewModule_or_Project.wizard/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605297607430" />
+    <state x="390" y="125" width="585" height="478" key="find.popup" timestamp="1605350725824">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="125" width="585" height="478" key="find.popup/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605350725824" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/de/amazon/stepDefinitions/MiniSmokeStepDefs.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
