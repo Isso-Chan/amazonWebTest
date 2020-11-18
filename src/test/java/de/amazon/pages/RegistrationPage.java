@@ -10,7 +10,7 @@ public class RegistrationPage extends BasePage {
      *
      * @Param Driver.get()
      */
-    public RegistrationPage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+    //public RegistrationPage() {
+     //   PageFactory.initElements(Driver.get(), this);
+   // }
 }

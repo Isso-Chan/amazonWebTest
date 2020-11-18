@@ -11,17 +11,16 @@ public class BasketPage extends BasePage {
 
     /**
      * PageFactory design pattern, so the page WebElements are assigned automatically, when it opened.
-     *
      * @Param Driver.get()
      */
-    public BasketPage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+   // public BasketPage() {
+   //     PageFactory.initElements(Driver.get(), this);
+   // }
 
     /**
      * Find Page WebElements
      */
-    @FindBy(className = "sc-product-price")
+    @FindBy(xpath = "//div[@data-name='Active Items']/div//p[1]/span")
     public List<WebElement> productPrices;
 
     @FindBy(css = "#sc-subtotal-amount-activecart > span")
@@ -33,7 +32,6 @@ public class BasketPage extends BasePage {
 
     /**
      * sum the product prices in the basket
-     *
      * @return
      */
     public double calculateTotalPriceOfProducts() {
@@ -47,7 +45,6 @@ public class BasketPage extends BasePage {
 
     /**
      * convert the String Price value to double with 2 decimals after point
-     *
      * @param text
      * @return
      */
@@ -58,7 +55,6 @@ public class BasketPage extends BasePage {
 
     /**
      * convert the double Price value to double with 2 decimals after point
-     *
      * @param value
      * @return
      */
@@ -68,7 +64,6 @@ public class BasketPage extends BasePage {
 
     /**
      * get total amount of prices, written at bottom on the page,  in double (2 decimals) format
-     *
      * @return
      */
     public double getSubtotal() {

@@ -16,12 +16,11 @@ public class ProductPage extends BasePage {
 
     /**
      * PageFactory design pattern, so the page WebElements are assigned automatically, when it opened.
-     *
      * @Param Driver.get()
      */
-    public ProductPage() {
-        PageFactory.initElements(Driver.get(), this);
-    }
+    //public ProductPage() {
+     //   PageFactory.initElements(Driver.get(), this);
+    //}
 
     /**
      * create logger to log infos, errors etc.
@@ -32,7 +31,7 @@ public class ProductPage extends BasePage {
      * Find Page WebElements
      */
     /**
-     * On some product pages, "add to basket" button names are different
+     * On some product pages, "add to basket" button names are different according to seller's type
      * if any of them is visible, assign it to WebElement
      */
 
@@ -83,17 +82,26 @@ public class ProductPage extends BasePage {
          * and then click it to add product to basket
          */
 
+        boolean added=false;
+
         if (addToBasketMainButton1.size() != 0) {
             waitForClickable(addToBasketMainButton1.get(0),3).click();
+            added=true;
         } else if (seeAllBuyingOptionsButton.size() != 0) {
            waitForClickable(seeAllBuyingOptionsButton.get(0),3).click();
+            logger.info("Trying other buying options");
            waitForClickable(addToBasketButtons.get(0),3).click();
+            added=true;
         } else if (addToBasketMainButton2.size() != 0) {
             waitForClickable(addToBasketMainButton2.get(0),3).click();
+            added=true;
         } else if (addToBasketMainButton3.size() != 0) {
             waitForClickable(addToBasketMainButton3.get(0),3).click();
+            added=true;
         }
 
+        if(added)
+            logger.info("Product is added to basket");
 
     }
 

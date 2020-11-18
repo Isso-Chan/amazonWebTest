@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         strict = true,
         // to check whether all feature file steps have corresponding step definitions
         dryRun = false, // to add new test scenario methods, turn this to true
-        tags = ""
+        tags = "@all"
 )
 class CucumberRunner {
 }

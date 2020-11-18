@@ -1,20 +1,22 @@
 package de.amazon.stepDefinitions;
 
-import de.amazon.pages.BasketPage;
-import de.amazon.pages.Homepage;
-import de.amazon.pages.ProductPage;
-import de.amazon.pages.SearchResultsPage;
+import de.amazon.pages.*;
 import de.amazon.utilities.BrowserUtilities;
 import de.amazon.utilities.ConfigurationReader;
 import de.amazon.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertEquals;
 
 
 public class MiniSmokeStepDefs {
+
+    Logger logger = LoggerFactory.getLogger(BasePage.class);
+    String searchItem;
 
     @Given("I am on the homepage")
     public void i_am_on_the_homepage() {
@@ -44,13 +46,14 @@ public class MiniSmokeStepDefs {
     public void i_search_the_product(String item) {
         Homepage homepage = new Homepage();
         homepage.searchItem(item);
+        searchItem=item;
         new SearchResultsPage().undoSearchItemTranslate();
     }
 
     @When("I sort the products by {string}")
     public void i_sort_the_products_by(String sortOption) {
         SearchResultsPage searchRP = new SearchResultsPage();
-        searchRP.sortItems(sortOption);
+        searchRP.sortItems(sortOption, searchItem);
         new SearchResultsPage().undoSearchItemTranslate();
     }
 
@@ -74,18 +77,21 @@ public class MiniSmokeStepDefs {
         double expectedValue = basketPage.calculateTotalPriceOfProducts();
         double actualValue = basketPage.getSubtotal();
         assertEquals(expectedValue, actualValue, 0D);
+        logger.info("Correct calculation of basket is verified");
     }
 
     @When("I proceed to checkout")
     public void i_proceed_to_checkout() {
         new BasketPage().proceedToCheckout.click();
+        logger.info("Proceed to checkout");
     }
 
     @Then("I get redirected to the {string} page")
     public void i_get_redirected_to_the_page(String pageName) {
         String actualTitle = Driver.get().getTitle();
         String expectedTitle = pageName;
-        assertEquals("Verify that user is on the Amazon Registration Page", expectedTitle, actualTitle);
+        assertEquals("Verify that user is on the Amazon Login Page", expectedTitle, actualTitle);
+        logger.info("Verified that user is on Login page");
 
     }
 

@@ -2,14 +2,19 @@ package de.amazon.pages;
 
 import de.amazon.utilities.BrowserUtilities;
 import de.amazon.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.List;
 
 public abstract class BasePage {
 
@@ -49,9 +54,14 @@ public abstract class BasePage {
      */
     public void changeLanguage(String language) {
         BrowserUtilities.hover(languageBar);
-        //Driver.get().findElement(By.cssSelector("#nav-flyout-icp a[href^=\"#switch-lang\"]"))
-                //.findElement(By.xpath("//span[text()=\"" + language + "\"]")).click();
-        Driver.get().findElement(By.xpath("//div[@id='nav-flyout-icp']//span[.='"+language+"']")).click();
+        WebElement selectedLanguage = Driver.get().findElement(By.xpath("//div[@id='nav-flyout-icp']//span[.='" + language + "']"));
+        BrowserUtilities.waitForClickable(selectedLanguage,5).click();
+
+        BrowserUtilities.hover(languageBar);
+        List<WebElement> languages = Driver.get().findElements(By.cssSelector("#nav-flyout-icp a[href^='#switch-lang']"));
+        BrowserUtilities.waitForPageToLoad(5);
+        Assert.assertFalse(languages.contains(selectedLanguage));
+        logger.info("Language is verified as: {}", language);
 
     }
 
@@ -61,7 +71,10 @@ public abstract class BasePage {
      * @param item
      */
     public void searchItem(String item) {
-        searchBox.sendKeys(item, Keys.ENTER);
+        searchBox.sendKeys(item);
+        Assert.assertEquals(searchBox.getAttribute("value"), item);
+        logger.info("Item name send to searchbox is verified as: {}", item);
+        searchBox.sendKeys(Keys.ENTER);
     }
 
     /**
@@ -69,9 +82,10 @@ public abstract class BasePage {
      */
     public void acceptCookies() {
         try {
-            Driver.get().findElement(By.id("sp-cc-accept")).click();
+            List<WebElement> cookies = Driver.get().findElements(By.id("sp-cc-accept"));
+            BrowserUtilities.waitForClickable(cookies.get(0),10).click();
             logger.info("Cookies were accepted");
-        } catch (NoSuchElementException e) {
+        } catch (NoSuchElementException ignored) {
         }
     }
 
@@ -82,6 +96,10 @@ public abstract class BasePage {
      */
     public void selectSearchDepartment(String department) {
         searchDepartmentBox.click();
-        BrowserUtilities.waitForClickable(Driver.get().findElement(By.xpath("//option[text()=\"" + department + "\"]")), 5).click();
+        WebElement departmentsButton = Driver.get().findElement(By.xpath("//select[@class='nav-search-dropdown searchSelect']"));
+        Select select=new Select(departmentsButton);
+        select.selectByVisibleText(department);
+        Assert.assertEquals("Department verification", select.getFirstSelectedOption().getText(),department);
+        logger.info("Department is verified as: {}", department);
     }
 }

@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: Amazon, the cheapest product searching and checkout process
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 130.984 s <<< FAILURE! - in Amazon, the cheapest product searching and checkout process
-Verify that on Checkout, without an account, the user gets redirected to the registration page(Amazon, the cheapest product searching and checkout process)  Time elapsed: 55.129 s  <<< FAILURE!
-org.junit.ComparisonFailure: Verify that user is on the Amazon Registration Page expected:<Amazon [Registratio]n> but was:<Amazon [Sign I]n>
-
