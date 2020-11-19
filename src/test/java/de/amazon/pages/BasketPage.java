@@ -4,6 +4,8 @@ import de.amazon.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class BasketPage extends BasePage {
    // public BasketPage() {
    //     PageFactory.initElements(Driver.get(), this);
    // }
+    Logger logger = LoggerFactory.getLogger(BasketPage.class);
 
     /**
      * Find Page WebElements

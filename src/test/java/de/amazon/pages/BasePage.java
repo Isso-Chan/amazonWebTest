@@ -44,12 +44,11 @@ public abstract class BasePage {
     @FindBy(id = "twotabsearchtextbox")
     public WebElement searchBox;
 
-    @FindBy(id = "nav-cart")
+    @FindBy(id = "nav-cart-count-container")
     public WebElement basketButton;
 
     /**
      * change language
-     *
      * @param language
      */
     public void changeLanguage(String language) {
@@ -67,12 +66,11 @@ public abstract class BasePage {
 
     /**
      * type a product name to search bar and search it
-     *
      * @param item
      */
     public void searchItem(String item) {
         searchBox.sendKeys(item);
-        Assert.assertEquals(searchBox.getAttribute("value"), item);
+        Assert.assertEquals(item, searchBox.getAttribute("value"));
         logger.info("Item name send to searchbox is verified as: {}", item);
         searchBox.sendKeys(Keys.ENTER);
     }
@@ -91,7 +89,6 @@ public abstract class BasePage {
 
     /**
      * select search department
-     *
      * @param department
      */
     public void selectSearchDepartment(String department) {

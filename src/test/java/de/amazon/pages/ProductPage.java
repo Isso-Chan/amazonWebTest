@@ -1,6 +1,7 @@
 package de.amazon.pages;
 
 import de.amazon.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -80,7 +81,10 @@ public class ProductPage extends BasePage {
         /**
          * Check first which "add to basket" button is available,
          * and then click it to add product to basket
+         * then verify it
          */
+
+        int initialAmaount = Integer.parseInt(basketButton.getText());
 
         boolean added=false;
 
@@ -100,8 +104,10 @@ public class ProductPage extends BasePage {
             added=true;
         }
 
+        //Verification
         if(added)
-            logger.info("Product is added to basket");
+            Assert.assertTrue(Integer.parseInt(basketButton.getText()) > initialAmaount);
+            logger.info("Verified that product is added to basket");
 
     }
 

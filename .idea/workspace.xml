@@ -4,20 +4,13 @@
     <list default="true" id="9b76390d-cb29-4253-98c3-3160fb5b3c1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasketPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/BasketPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/ProductPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/ProductPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/RegistrationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/pages/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/pages/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/runners/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/runners/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/amazon/stepDefinitions/MiniSmokeStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/amazon/stepDefinitions/MiniSmokeStepDefs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/amazonWebTest-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/amazonWebTest-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/cucumber.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/default-html-reports" beforeDir="false" afterPath="$PROJECT_DIR$/target/default-html-reports" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/failed-html-report" beforeDir="false" afterPath="$PROJECT_DIR$/target/failed-html-report" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/embeddings/embedding_-559190998.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-failures.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-failures.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-features.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-features.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-steps.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/overview-steps.html" afterDir="false" />
@@ -27,25 +20,15 @@
       <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_2149486944.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_2149486944.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_3971419525.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/myReports/cucumber-html-reports/report-tag_3971419525.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/rerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2020-11-13T23-43-08_539.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/2020-11-14T11-48-00_626.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Amazon, the cheapest product searching and checkout process.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Surefire suite/Surefire test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Amazon, the cheapest product searching and checkout process.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-de.amazon.runners.FailedTestRunner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/de.amazon.runners.FailedTestRunner.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/BasketPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/BasketPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/ProductPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/ProductPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/RegistrationPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/SearchResultsPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/pages/SearchResultsPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/runners/CucumberRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/runners/CucumberRunner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/amazon/stepDefinitions/MiniSmokeStepDefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/de/amazon/stepDefinitions/MiniSmokeStepDefs.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,28 +210,28 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="108" key="FileChooserDialogImpl/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605297652531" />
-    <state width="1322" height="232" key="GridCell.Tab.0.bottom" timestamp="1605739226805">
+    <state width="1322" height="193" key="GridCell.Tab.0.bottom" timestamp="1605800279896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="232" key="GridCell.Tab.0.bottom/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605739226805" />
+    <state width="1322" height="193" key="GridCell.Tab.0.bottom/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605800279896" />
     <state width="1322" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.bottom/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
-    <state width="1322" height="232" key="GridCell.Tab.0.center" timestamp="1605739226805">
+    <state width="1322" height="193" key="GridCell.Tab.0.center" timestamp="1605800279896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="232" key="GridCell.Tab.0.center/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605739226805" />
+    <state width="1322" height="193" key="GridCell.Tab.0.center/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605800279896" />
     <state width="1322" height="187" key="GridCell.Tab.0.center/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.center/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
-    <state width="1322" height="232" key="GridCell.Tab.0.left" timestamp="1605739226805">
+    <state width="1322" height="193" key="GridCell.Tab.0.left" timestamp="1605800279896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="232" key="GridCell.Tab.0.left/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605739226805" />
+    <state width="1322" height="193" key="GridCell.Tab.0.left/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605800279896" />
     <state width="1322" height="187" key="GridCell.Tab.0.left/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080929" />
     <state width="1132" height="165" key="GridCell.Tab.0.left/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265578" />
-    <state width="1322" height="232" key="GridCell.Tab.0.right" timestamp="1605739226805">
+    <state width="1322" height="193" key="GridCell.Tab.0.right" timestamp="1605800279896">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="232" key="GridCell.Tab.0.right/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605739226805" />
+    <state width="1322" height="193" key="GridCell.Tab.0.right/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605800279896" />
     <state width="1322" height="187" key="GridCell.Tab.0.right/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605301080930" />
     <state width="1132" height="165" key="GridCell.Tab.0.right/0.0.1366.728/190.-664.1176.664@190.-664.1176.664" timestamp="1605298265579" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1605710414198">
@@ -275,9 +258,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="350" y="68" key="NewModule_or_Project.wizard/0.0.1366.728/190.-664.1176.664@0.0.1366.728" timestamp="1605297607430" />
-    <state x="390" y="125" width="585" height="478" key="find.popup" timestamp="1605735916215">
+    <state x="390" y="125" width="585" height="478" key="find.popup" timestamp="1605801194157">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="125" width="585" height="478" key="find.popup/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605735916215" />
+    <state x="390" y="125" width="585" height="478" key="find.popup/0.0.1366.728/0.-664.1176.664@0.0.1366.728" timestamp="1605801194157" />
   </component>
 </project>

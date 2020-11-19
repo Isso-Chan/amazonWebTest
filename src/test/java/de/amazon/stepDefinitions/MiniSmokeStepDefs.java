@@ -77,7 +77,7 @@ public class MiniSmokeStepDefs {
         double expectedValue = basketPage.calculateTotalPriceOfProducts();
         double actualValue = basketPage.getSubtotal();
         assertEquals(expectedValue, actualValue, 0D);
-        logger.info("Correct calculation of basket is verified");
+        logger.info("Correct calculation of basket is verified as {}", actualValue);
     }
 
     @When("I proceed to checkout")
