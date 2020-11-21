@@ -56,6 +56,7 @@ public class SearchResultsPage extends BasePage {
         logger.info("Searched item was verified as: {}", searchItem);
         BrowserUtilities.waitForClickable(resultSortSelect,10);
         Select select=new Select(resultSortSelect);
+        BrowserUtilities.waitForClickable(select.getOptions().get(1),5);
         select.selectByVisibleText(sortOption);
 
     }

@@ -1,9 +1,12 @@
 package de.amazon.pages;
 
+import de.amazon.utilities.BrowserUtilities;
 import de.amazon.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +22,7 @@ public class BasketPage extends BasePage {
    //     PageFactory.initElements(Driver.get(), this);
    // }
     Logger logger = LoggerFactory.getLogger(BasketPage.class);
+    static int beforeChange, afterChange, quantityOfChange;
 
     /**
      * Find Page WebElements
@@ -28,6 +32,15 @@ public class BasketPage extends BasePage {
 
     @FindBy(css = "#sc-subtotal-amount-activecart > span")
     public WebElement subtotal;
+
+    @FindBy(id = "sc-subtotal-label-activecart")
+    public WebElement itemsInBasket;
+
+    @FindBy(css = ".sc-action-quantity select")
+    public List<WebElement> quantitiesOfItems;
+
+    @FindBy(xpath = "//input[@data-action='delete']")
+    public List<WebElement> deleteButtons;
 
     @FindBy(css = "#sc-buy-box-ptc-button input")
     public WebElement proceedToCheckout;
@@ -71,5 +84,79 @@ public class BasketPage extends BasePage {
      */
     public double getSubtotal() {
         return convert2TwoDecimalsDouble(subtotal.getText());
+    }
+
+
+    /*
+     * Removes an item from basket and verify it
+     */
+    public void removeAnItemFromBasket() {
+        basketButton.click();
+        beforeChange=getItemSubTotalInBasket();
+        int selectedItemNu=(int)(Math.random() * deleteButtons.size()) ;
+        quantityOfChange=-getQuantityOfSelectedItem(selectedItemNu);
+        deleteButtons.get(selectedItemNu).click();
+        afterChange=getItemSubTotalInBasket();
+
+    }
+
+    //get the amount from subtotal
+    public int getItemSubTotalInBasket(){
+        return Integer.parseInt(itemsInBasket.getText().trim().split(" ")[1].substring(1));
+    }
+
+    public int getQuantityOfSelectedItem(int selectedItemNu){
+        Select select=new Select(quantitiesOfItems.get(selectedItemNu));
+        return Integer.parseInt(select.getFirstSelectedOption().getText().replaceAll("(.[\\w ].) ","").trim());
+    }
+
+    public void selectAnAmountFromSelectedItem(int selectedItemNu){
+        Select select=new Select(quantitiesOfItems.get(selectedItemNu));
+        int currentAmount = getQuantityOfSelectedItem(selectedItemNu);
+        System.out.println("currentAmount = " + currentAmount);
+        int selectedQuantity=0;
+        do {
+            selectedQuantity= (int) (Math.random() * select.getOptions().size());
+        }while(selectedQuantity==currentAmount);
+
+/*
+        if(currentAmount==1){
+            selectedQuantity=2;
+        }else{
+            selectedQuantity=currentAmount-1;
+        }*/
+        System.out.println("selectedItemQuantity = " + selectedQuantity);
+        select.selectByIndex(selectedQuantity);
+        quantityOfChange=selectedQuantity-currentAmount;
+        System.out.println("quantityOfChange = " + quantityOfChange);
+        Driver.get().navigate().refresh();
+
+
+        //return Integer.parseInt(select.getFirstSelectedOption().getText().replaceAll("(.[\\w ].) ","").trim());
+    }
+
+    public void SeeThatTheAmountOfItemsInBasketChanges() {
+        System.out.println("beforeChange in SeeThatTheAmountOfItemsInBasketChanges= " + beforeChange);
+        System.out.println("afterChange in SeeThatTheAmountOfItemsInBasketChanges= " + afterChange);
+        System.out.println("quantityOfChange = " + quantityOfChange);
+        Assert.assertEquals("Item amount change verification", quantityOfChange, (afterChange-beforeChange));
+        logger.info("Item amount change is verified ");
+    }
+
+    public void ChangeTheAmountOfAnyItemInBasket() {
+        basketButton.click();
+        //gets the amount of items is basket from subtotal
+        beforeChange=getItemSubTotalInBasket();
+        System.out.println("beforeChange = " + beforeChange);
+
+        //seletcs one item randomly
+        int selectedItemNu=(int)(Math.random() * deleteButtons.size()) ;
+        System.out.println("selectedItemNu = " + selectedItemNu);
+        //gets the quantity of selected item
+        quantityOfChange=getQuantityOfSelectedItem(selectedItemNu);
+        selectAnAmountFromSelectedItem(selectedItemNu);
+        afterChange=getItemSubTotalInBasket();
+        System.out.println("afterChange = " + afterChange);
+
     }
 }

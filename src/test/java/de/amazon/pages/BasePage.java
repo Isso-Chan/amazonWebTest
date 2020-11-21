@@ -35,6 +35,9 @@ public abstract class BasePage {
     /**
      * Find Page WebElements
      */
+    @FindBy(css = "#nav-link-accountList div")
+    public WebElement signIn;
+
     @FindBy(id = "icp-nav-flyout")
     public WebElement languageBar;
 

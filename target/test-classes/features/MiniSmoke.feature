@@ -22,16 +22,23 @@ Feature: The cheapest product searching and checkout process
     And I add the cheapest "Skittles" to the basket
     And I navigate to basket page
 
-  # Expected result is PASS
-  @all @basket
+  @all @basket @smoke
   Scenario: Verify that the basket calculates the result correctly
     Then I see that the basket calculates the result correctly
 
 # Expected result is intentionally wrong entered to make the case FAIL
   @all @checkout
-  Scenario: Verify that new user gets redirected to login page
+  Scenario: Verify that user login with valid credentials
     When I proceed to checkout
-    Then I get redirected to the "Amazon Registration" page
+    #And I get redirected to the "Amazon Sign In" page
+    And I enter my username as "username"
+    And I enter my password as "password"
+    Then I login my account
+
+
+
+
+
 
 
 

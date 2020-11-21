@@ -1,4 +1,5 @@
 de\amazon\stepDefinitions\Hooks.class
+de\amazon\stepDefinitions\BasketStepDefs.class
 de\amazon\utilities\ConfigurationReader.class
 de\amazon\pages\RegistrationPage.class
 de\amazon\utilities\BrowserUtilities$1.class
@@ -10,5 +11,6 @@ de\amazon\pages\ProductPage.class
 de\amazon\utilities\BrowserUtilities.class
 de\amazon\runners\FailedTestRunner.class
 de\amazon\pages\SearchResultsPage.class
+de\amazon\stepDefinitions\RegistrationStepDefs.class
 de\amazon\pages\BasketPage.class
 de\amazon\pages\Homepage.class

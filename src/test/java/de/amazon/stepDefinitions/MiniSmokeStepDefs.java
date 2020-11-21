@@ -4,9 +4,11 @@ import de.amazon.pages.*;
 import de.amazon.utilities.BrowserUtilities;
 import de.amazon.utilities.ConfigurationReader;
 import de.amazon.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -89,11 +91,13 @@ public class MiniSmokeStepDefs {
     @Then("I get redirected to the {string} page")
     public void i_get_redirected_to_the_page(String pageName) {
         String actualTitle = Driver.get().getTitle();
-        String expectedTitle = pageName;
-        assertEquals("Verify that user is on the Amazon Login Page", expectedTitle, actualTitle);
+        assertEquals("Verify that user is on the Amazon Login Page", pageName, actualTitle);
         logger.info("Verified that user is on Login page");
 
     }
+
+
+
 
 
 }

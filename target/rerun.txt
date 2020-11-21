@@ -1,1 +1,1 @@
-file:src/test/resources/features/MiniSmoke.feature:32
+file:src/test/resources/features/MiniSmoke.feature:31
