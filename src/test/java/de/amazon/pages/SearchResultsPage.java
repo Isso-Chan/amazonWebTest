@@ -4,6 +4,7 @@ import de.amazon.utilities.BrowserUtilities;
 import de.amazon.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -54,11 +55,14 @@ public class SearchResultsPage extends BasePage {
     public void sortItems(String sortOption, String searchItem) {
         Assert.assertEquals(searchItem, searchedItemName.getText().replace("\"", ""));
         logger.info("Searched item was verified as: {}", searchItem);
-        BrowserUtilities.waitForClickable(resultSortSelect,10);
-        Select select=new Select(resultSortSelect);
-        BrowserUtilities.waitForClickable(select.getOptions().get(1),5);
-        select.selectByVisibleText(sortOption);
-
+        Driver.get().navigate().refresh();
+        try {
+            BrowserUtilities.waitForClickable(resultSortSelect,10);
+            Select select=new Select(resultSortSelect);
+            BrowserUtilities.waitForClickable(select.getOptions().get(1),5);
+            select.selectByVisibleText(sortOption);
+        }catch(StaleElementReferenceException e){
+        }
     }
 
     /**

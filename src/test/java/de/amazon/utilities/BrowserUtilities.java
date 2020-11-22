@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -91,10 +92,10 @@ public class BrowserUtilities {
     }
 
     /**
-     * return a list of string from a list of elements
+     * return a list of String from a list of elements
      *
      * @param list of webelements
-     * @return list of string
+     * @return list of String
      */
     public static List<String> getElementsText(List<WebElement> list) {
         List<String> elemTexts = new ArrayList<>();
@@ -103,4 +104,62 @@ public class BrowserUtilities {
         }
         return elemTexts;
     }
+
+    /**
+     * return a list of Integer from a list of elements
+     *
+     * @param list of webelements
+     * @return list of Integer
+     * @type Select
+     */
+    public static List<Integer> getElementsTextAsInteger(List<WebElement> list) {
+        List<Integer> elemTexts = new ArrayList<>();
+        for (WebElement el : list) {
+            Select select=new Select(el);
+            elemTexts.add(Integer.parseInt(select.getFirstSelectedOption().getText().replace("\" ","").trim()));
+        }
+        return elemTexts;
+    }
+
+    /**
+     * sum the product prices in the basket
+     * @return
+     */
+    public static double calculateTotalPriceOfProducts(List<WebElement> elements) {
+
+        double total = 0.00;
+        for (WebElement productPrice : elements) {
+            total += convert2TwoDecimalsDouble(productPrice.getText());
+        }
+        return convert2TwoDecimalsDouble(total);
+    }
+
+    /**
+     * convert the String Price value to double with 2 decimals after point
+     * @param text
+     * @return
+     */
+    public static double convert2TwoDecimalsDouble(String text) {
+        double value = Double.parseDouble(text.substring(1));
+        return Math.round(value * 100.0) / 100.0;
+    }
+
+    /**
+     * convert the double Price value to double with 2 decimals after point
+     * @param value
+     * @return
+     */
+    public static double convert2TwoDecimalsDouble(double value) {
+        return Math.round(value * 100.0) / 100.0;
+    }
+
+
+    /**
+     * get total amount of prices, written at bottom on the page,  in double (2 decimals) format
+     * @return
+     */
+    public static double getSubtotal(WebElement element) {
+        return convert2TwoDecimalsDouble(element.getText());
+    }
+
 }

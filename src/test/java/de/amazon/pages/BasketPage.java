@@ -46,10 +46,12 @@ public class BasketPage extends BasePage {
     public WebElement proceedToCheckout;
 
 
+
     /**
      * sum the product prices in the basket
      * @return
      */
+    /*
     public double calculateTotalPriceOfProducts() {
 
         double total = 0.00;
@@ -57,35 +59,38 @@ public class BasketPage extends BasePage {
             total += convert2TwoDecimalsDouble(productPrice.getText());
         }
         return convert2TwoDecimalsDouble(total);
-    }
+    }*/
 
     /**
      * convert the String Price value to double with 2 decimals after point
      * @param text
      * @return
      */
+    /*
     public double convert2TwoDecimalsDouble(String text) {
         double value = Double.parseDouble(text.substring(1));
         return Math.round(value * 100.0) / 100.0;
-    }
+    }*/
 
     /**
      * convert the double Price value to double with 2 decimals after point
      * @param value
      * @return
      */
+    /*
     public double convert2TwoDecimalsDouble(double value) {
         return Math.round(value * 100.0) / 100.0;
-    }
+    }*/
 
     /**
      * get total amount of prices, written at bottom on the page,  in double (2 decimals) format
      * @return
      */
+    /*
     public double getSubtotal() {
         return convert2TwoDecimalsDouble(subtotal.getText());
     }
-
+    */
 
     /*
      * Removes an item from basket and verify it

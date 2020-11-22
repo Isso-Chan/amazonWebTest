@@ -1,6 +1,7 @@
 package de.amazon.stepDefinitions;
 
 import de.amazon.pages.BasketPage;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.slf4j.Logger;
@@ -26,4 +27,6 @@ public class BasketStepDefs {
     public void IChangeTheAmountOfAnyItemInBasket() {
         new BasketPage().ChangeTheAmountOfAnyItemInBasket();
     }
+
+
 }

@@ -50,6 +50,9 @@ public abstract class BasePage {
     @FindBy(id = "nav-cart-count-container")
     public WebElement basketButton;
 
+    @FindBy(id = "glow-ingress-line1")
+    public WebElement user;
+
     /**
      * change language
      * @param language
@@ -74,7 +77,7 @@ public abstract class BasePage {
     public void searchItem(String item) {
         searchBox.sendKeys(item);
         Assert.assertEquals(item, searchBox.getAttribute("value"));
-        logger.info("Item name send to searchbox is verified as: {}", item);
+        logger.info("Item name sent to searchbox is verified as: {}", item);
         searchBox.sendKeys(Keys.ENTER);
     }
 

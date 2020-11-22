@@ -113,8 +113,9 @@ public class RegistrationPage extends BasePage {
     }
 
     public void MyAccount() {
-        String actualUrl = Driver.get().getCurrentUrl();
-        Assert.assertTrue("Login URL verification",actualUrl.contains("https://www.amazon.de/ap/signin"));
+        //gets the name of the user from Amazon account and compare with that written in configuration properties
+        String actualUser = user.getText().split(" ")[user.getText().split(" ").length-1];
+        Assert.assertEquals("Login URL verification", ConfigurationReader.get("user"), (actualUser));
         logger.info("User log in is verified");
     }
 

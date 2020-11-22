@@ -14,3 +14,5 @@ de\amazon\pages\SearchResultsPage.class
 de\amazon\stepDefinitions\RegistrationStepDefs.class
 de\amazon\pages\BasketPage.class
 de\amazon\pages\Homepage.class
+de\amazon\stepDefinitions\CheckoutStepDef.class
+de\amazon\pages\CheckoutPage.class

@@ -76,8 +76,10 @@ public class MiniSmokeStepDefs {
     @Then("I see that the basket calculates the result correctly")
     public void i_see_that_the_basket_calculates_the_result_correctly() {
         BasketPage basketPage = new BasketPage();
-        double expectedValue = basketPage.calculateTotalPriceOfProducts();
-        double actualValue = basketPage.getSubtotal();
+        //double expectedValue = basketPage.calculateTotalPriceOfProducts();
+        double expectedValue = BrowserUtilities.calculateTotalPriceOfProducts(basketPage.productPrices);
+        //double actualValue = basketPage.getSubtotal();
+        double actualValue = BrowserUtilities.getSubtotal(basketPage.subtotal);
         assertEquals(expectedValue, actualValue, 0D);
         logger.info("Correct calculation of basket is verified as {}", actualValue);
     }

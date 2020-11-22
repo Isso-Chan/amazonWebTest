@@ -40,7 +40,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "screenshot");
         }
         // close WebDriver
-        Driver.closeDriver();
+        //Driver.closeDriver();
         logger.info("\t --- Test finished ---");
     }
 }
