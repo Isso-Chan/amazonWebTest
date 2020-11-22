@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class BasketPage extends BasePage {
 
@@ -22,7 +23,7 @@ public class BasketPage extends BasePage {
    //     PageFactory.initElements(Driver.get(), this);
    // }
     Logger logger = LoggerFactory.getLogger(BasketPage.class);
-    static int beforeChange, afterChange, quantityOfChange;
+    static int beforeChange, afterChange, quantityOfChange, selectedItemNu;
 
     /**
      * Find Page WebElements
@@ -44,6 +45,9 @@ public class BasketPage extends BasePage {
 
     @FindBy(css = "#sc-buy-box-ptc-button input")
     public WebElement proceedToCheckout;
+
+    @FindBy(xpath = "//h1")
+    public WebElement basketInfo;
 
 
 
@@ -98,47 +102,58 @@ public class BasketPage extends BasePage {
     public void removeAnItemFromBasket() {
         basketButton.click();
         beforeChange=getItemSubTotalInBasket();
-        int selectedItemNu=(int)(Math.random() * deleteButtons.size()) ;
-        quantityOfChange=-getQuantityOfSelectedItem(selectedItemNu);
-        deleteButtons.get(selectedItemNu).click();
-        afterChange=getItemSubTotalInBasket();
+        selectedItemNu=(int)(Math.random() * (deleteButtons.size()-1)) ;
+        if (beforeChange!=0){ //If the basket is not empty
+            quantityOfChange=-getQuantityOfSelectedItem();
+            deleteButtons.get(selectedItemNu).click();
+            afterChange=getItemSubTotalInBasket();
+        }else{
+            quantityOfChange=0;
+            afterChange=0;
+        }
 
     }
 
     //get the amount from subtotal
     public int getItemSubTotalInBasket(){
-        return Integer.parseInt(itemsInBasket.getText().trim().split(" ")[1].substring(1));
-    }
+        int number=0;
+        String basket=basketInfo.getText().trim();
+        //System.out.println("basket = " + basket);
 
-    public int getQuantityOfSelectedItem(int selectedItemNu){
-        Select select=new Select(quantitiesOfItems.get(selectedItemNu));
-        return Integer.parseInt(select.getFirstSelectedOption().getText().replaceAll("(.[\\w ].) ","").trim());
-    }
+        if(basket.equals("Added to Basket") || basket.equals("Shopping Basket")){
+            number=Integer.parseInt(itemsInBasket.getText().split(" ")[1].trim().substring(1));
 
-    public void selectAnAmountFromSelectedItem(int selectedItemNu){
-        Select select=new Select(quantitiesOfItems.get(selectedItemNu));
-        int currentAmount = getQuantityOfSelectedItem(selectedItemNu);
-        System.out.println("currentAmount = " + currentAmount);
-        int selectedQuantity=0;
-        do {
-            selectedQuantity= (int) (Math.random() * select.getOptions().size());
-        }while(selectedQuantity==currentAmount);
-
-/*
-        if(currentAmount==1){
-            selectedQuantity=2;
         }else{
-            selectedQuantity=currentAmount-1;
-        }*/
-        System.out.println("selectedItemQuantity = " + selectedQuantity);
-        select.selectByIndex(selectedQuantity);
-        quantityOfChange=selectedQuantity-currentAmount;
+            System.out.println("Your basket is emty!");
+        }
+        return number;
+    }
+
+
+    public void selectAnAmountFromSelectedItem(){
+        Select select=new Select(quantitiesOfItems.get(selectedItemNu));
+        int previousAmount = getQuantityOfSelectedItem();
+        System.out.println("previousAmount = " + previousAmount);
+        int sQuantity=0;
+        do {
+            sQuantity= (int) (Math.random() * select.getOptions().size()-1);
+        }while(sQuantity==previousAmount);
+
+        System.out.println("selectedItemQuantity = " + sQuantity);
+        select.selectByIndex(sQuantity);
+        quantityOfChange=sQuantity-previousAmount;
+        afterChange=getItemSubTotalInBasket();
         System.out.println("quantityOfChange = " + quantityOfChange);
         Driver.get().navigate().refresh();
 
-
-        //return Integer.parseInt(select.getFirstSelectedOption().getText().replaceAll("(.[\\w ].) ","").trim());
     }
+
+
+    public int getQuantityOfSelectedItem(){
+        Select slc=new Select(quantitiesOfItems.get(selectedItemNu));
+        return Integer.parseInt(slc.getFirstSelectedOption().getText().replaceAll("(.[\\w ].) ","").trim());
+    }
+
 
     public void SeeThatTheAmountOfItemsInBasketChanges() {
         System.out.println("beforeChange in SeeThatTheAmountOfItemsInBasketChanges= " + beforeChange);
@@ -154,12 +169,12 @@ public class BasketPage extends BasePage {
         beforeChange=getItemSubTotalInBasket();
         System.out.println("beforeChange = " + beforeChange);
 
-        //seletcs one item randomly
-        int selectedItemNu=(int)(Math.random() * deleteButtons.size()) ;
+        //selects one item randomly
+        selectedItemNu=(int)(Math.random() * deleteButtons.size()-1) ;
         System.out.println("selectedItemNu = " + selectedItemNu);
         //gets the quantity of selected item
-        quantityOfChange=getQuantityOfSelectedItem(selectedItemNu);
-        selectAnAmountFromSelectedItem(selectedItemNu);
+        quantityOfChange=getQuantityOfSelectedItem();
+        selectAnAmountFromSelectedItem();
         afterChange=getItemSubTotalInBasket();
         System.out.println("afterChange = " + afterChange);
 

@@ -13,6 +13,6 @@ Feature: Basket add/remove functionality
     Then I see that the amount of items in basket changes
 
     @change
-  Scenario:  Increase item number in basket
+  Scenario:  Change item quantity in basket
     When I change the amount of any item in basket
     Then I see that the amount of items in basket changes

@@ -75,18 +75,18 @@ public class CheckoutPage extends BasePage {
         logger.info("Payment with creditcard is verified");
 
         //Verify the quantities of products
-        List<Integer> productQuantities = BrowserUtilities.getElementsTextAsInteger(this.productQuantities);
+        List<Integer> pQuantities = BrowserUtilities.getElementsTextAsInteger(productQuantities);
         Integer productSum=0;
-        for (Integer quantity: productQuantities) {
+        for (Integer quantity: pQuantities) {
             productSum+=quantity;
         }
         Assert.assertEquals(productSum.toString()+" items", totalItemInHeading.getText());
         logger.info("Total item amount is verified");
 
         //Verify total cost
-        List<String> pPrices = BrowserUtilities.getElementsText(productPrices);
-        double calculatedPrice = BrowserUtilities.calculateTotalPriceOfProducts(productPrices);
-        double subtotal = BrowserUtilities.getSubtotal(totalPrice.get(2));
+        List<Integer> quantityList = BrowserUtilities.getElementsTextAsInteger(productQuantities);
+        double calculatedPrice = BrowserUtilities.calculateTotalPriceOfProducts(productPrices, quantityList);
+        double subtotal = BrowserUtilities.getSubtotal(totalPrice.get(0));
 
         Assert.assertEquals("Total price verification",subtotal, calculatedPrice, 0D);
         logger.info("Total price is verified");

@@ -135,12 +135,29 @@ public class BrowserUtilities {
     }
 
     /**
+     * sum the product prices in the basket
+     * @return
+     */
+    public static double calculateTotalPriceOfProducts(List<WebElement> prices, List<Integer> quantity) {
+
+        double total = 0.00;
+        for (int i = 0; i<prices.size(); i++) {
+            double p=convert2TwoDecimalsDouble(prices.get(i).getText());
+            double q=convert2TwoDecimalsDouble(quantity.get(i));
+            total +=p*q ;
+            System.out.println("q = " + q+ ",   p = " + p+ ",   total = " + total);
+
+        }
+        return convert2TwoDecimalsDouble(total);
+    }
+
+    /**
      * convert the String Price value to double with 2 decimals after point
      * @param text
      * @return
      */
     public static double convert2TwoDecimalsDouble(String text) {
-        double value = Double.parseDouble(text.substring(1));
+        double value = Double.parseDouble(text.split(" ")[0].trim().substring(1));
         return Math.round(value * 100.0) / 100.0;
     }
 

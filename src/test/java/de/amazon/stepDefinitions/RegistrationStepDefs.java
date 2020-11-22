@@ -57,6 +57,7 @@ public class RegistrationStepDefs {
 
     @Then("I get error message on password")
     public void I_Get_Error_Message_On_Password() {
+        Driver.get().navigate().refresh();
         Assert.assertTrue(new RegistrationPage().errorMessage.isDisplayed());
         logger.info("Wrong email warning message is verified as: {} ", new RegistrationPage().errorMessage.getText());
     }
