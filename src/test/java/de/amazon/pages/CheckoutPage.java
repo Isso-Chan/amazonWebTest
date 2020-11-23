@@ -48,6 +48,12 @@ public class CheckoutPage extends BasePage {
     @FindBy(xpath = "//table[@id='subtotals-marketplace-table']//td[@class='a-text-right aok-nowrap a-nowrap']")
     public List<WebElement> totalPrice;
 
+    @FindBy(id = "banner-image")
+    public WebElement AmazonBanner;
+
+    @FindBy(id = "a-autoid-1-announce")
+    public WebElement returnTheBasket;
+
     //verify the checkout page
     public void ISeeCheckoutPage() {
         Driver.get().navigate().refresh();
@@ -55,6 +61,13 @@ public class CheckoutPage extends BasePage {
         String heading=checkoutHeading.getText().split(" ")[0].trim();
         Assert.assertEquals("Verification of page", heading, "Checkout");
         logger.info("Checkout page is verified");
+
+        //Amazon checkout page do NOT load the page with those products, which were added in basket before
+        //So I go to basket again to update the basket
+        //AmazonBanner.click();
+        //returnTheBasket.click();
+        //logger.info("Basket is updated");
+
     }
 
     public void SignedInMyAmazonAccount() {
@@ -80,7 +93,7 @@ public class CheckoutPage extends BasePage {
         for (Integer quantity: pQuantities) {
             productSum+=quantity;
         }
-        Assert.assertEquals(productSum.toString()+" items", totalItemInHeading.getText());
+        Assert.assertEquals(productSum.toString(), totalItemInHeading.getText().split(" ")[0]);
         logger.info("Total item amount is verified");
 
         //Verify total cost
@@ -90,6 +103,7 @@ public class CheckoutPage extends BasePage {
 
         Assert.assertEquals("Total price verification",subtotal, calculatedPrice, 0D);
         logger.info("Total price is verified");
+
 
     }
 }
